@@ -2,24 +2,33 @@ let cast = {
     "characters" : [
         {
             "name":"Akshay Kumar",
-            "shortCode": "akshay-kumar",
-            "location": "Mumbai"
+            "location": ""
         },
         {
             "name":"Amitji",
             "shortCode": "amitji",
-            "location": "Mumbai"
         },
         {
             "name":"Vidya Balan",
             "shortCode": "vidya",
-            "location": "Mumbai"
+            "location": null
         },
         {
             "name":"Ajay",
             "shortCode": "ajay",
-            "location": "Mumbai"
+            "location": false
         },
+        {
+            "name":"Kajol",
+            "shortCode": "kajol",
+            "location": undefined,
+            "house": "Somewhere"
+        },
+        {
+            "name":"Kishor",
+            "shortCode": "kishor",
+            "location": "Delhi"
+        }
     ]
 }
 
@@ -45,4 +54,8 @@ $(document).ready(function (){
     characterTemplate=$("#character-template3").html();
     compiledCharacterTemplate = Handlebars.compile(characterTemplate);
     $(".character-list-container3").html(compiledCharacterTemplate(cities))
+
+    characterTemplate=$("#character-template4").html();
+    compiledCharacterTemplate = Handlebars.compile(characterTemplate);
+    $(".character-list-container4").html(compiledCharacterTemplate(cast))
 })
