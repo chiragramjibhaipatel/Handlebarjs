@@ -57,6 +57,20 @@
         {{/each}}
     </script>
 
+    <h1>unless</h1>
+    <ul class="character-list-container5"></ul>
+    <script id="character-template5" type="text/x-handlebars-template">
+        {{#each characters}}
+            <li class="characters">
+                <h4>First: {{@first}} Last:{{@last}} Index: {{@index}}</h4>
+                <h5>Name: {{name}}</h5>
+                {{#if shortCode}}<p>ShortCode: {{shortCode}}</p>{{/if}}
+                {{#unless shortCode}}Shortcode not present...{{/unless}}
+                <p>Location:{{#if location}} {{location}} {{else if house}} {{house}} {{else}}no-data  {{/if}}</p>
+            </li>
+        {{/each}}
+    </script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>

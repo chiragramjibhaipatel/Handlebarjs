@@ -58,4 +58,8 @@ $(document).ready(function (){
     characterTemplate=$("#character-template4").html();
     compiledCharacterTemplate = Handlebars.compile(characterTemplate);
     $(".character-list-container4").html(compiledCharacterTemplate(cast))
+
+    characterTemplate=$("#character-template5").html();
+    compiledCharacterTemplate = Handlebars.compile(characterTemplate);
+    $(".character-list-container5").html(compiledCharacterTemplate(cast))
 })
